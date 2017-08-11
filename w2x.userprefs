@@ -1,0 +1,69 @@
+﻿<Properties StartupConfiguration="{004FAC60-3B72-4A11-967A-2C2DC582FA17}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="w2x/Views/Points/PointView.cs">
+    <Files>
+      <File FileName="w2x/w2x.cs" Line="9" Column="3" />
+      <File FileName="w2x/Views/Authentications/AuthenticationPage.cs" Line="5" Column="36" />
+      <File FileName="w2x/Views/Authentications/AuthenticationView.cs" Line="87" Column="21" />
+      <File FileName="w2x/Models/Logics/Users.cs" Line="41" Column="5" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="w2x/Views/Greetings/GreetingView.cs" Line="67" Column="55" />
+      <File FileName="w2x/Views/Points/PointPage.cs" Line="14" Column="30" />
+      <File FileName="w2x/Views/Points/PointView.cs" Line="56" Column="4" />
+      <File FileName="w2x/Views/Points/Redeems/RedeemPage.cs" Line="11" Column="4" />
+      <File FileName="w2x/Views/Points/Redeems/RedeemView.cs" Line="1" Column="1" />
+      <File FileName="w2x/Views/Points/Transactions/TransactionPage.cs" Line="20" Column="1" />
+      <File FileName="w2x/Views/Points/Transactions/TransactionView.cs" Line="1" Column="1" />
+      <File FileName="w2x/Views/Greetings/GreetingPage.cs" Line="11" Column="4" />
+      <File FileName="w2x/Views/Dashboards/Dustbin/DustbinPage.cs" Line="14" Column="29" />
+      <File FileName="w2x/Views/Dashboards/Dustbin/DustbinView.cs" Line="1" Column="1" />
+      <File FileName="w2x/Views/Dashboards/CollectedHistory/CollectionHistoryPage.cs" Line="18" Column="1" />
+      <File FileName="w2x/Views/Dashboards/CollectedHistory/CollectionHistoryView.cs" Line="1" Column="1" />
+      <File FileName="w2x/Views/Dashboards/DashboardView.cs" Line="5" Column="31" />
+      <File FileName="w2x/Views/Dashboards/DashboardPage.cs" Line="9" Column="16" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="w2x" expanded="True">
+            <Node name="w2x" expanded="True">
+              <Node name="Components" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Logics" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Authentications" expanded="True" />
+                <Node name="Dashboards" expanded="True">
+                  <Node name="CollectedHistory" expanded="True" />
+                  <Node name="Dustbin" expanded="True" />
+                </Node>
+                <Node name="Greetings" expanded="True" />
+                <Node name="Points" expanded="True">
+                  <Node name="Redeems" expanded="True" />
+                  <Node name="Transactions" expanded="True" />
+                  <Node name="PointView.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="w2x.Droid" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="w2x.iOS" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.w2x HideGettingStarted="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.w2x.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F2669A24-78E8-4C57-B183-1CAF925E420E" />
+</Properties>
