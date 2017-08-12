@@ -9,7 +9,8 @@ namespace w2x.Views.Points
 		public PointPage()
 		{
 			NavigationPage.SetHasNavigationBar(this, true);
-			Title = "Greeting";
+
+			Title = "Points";
 			BackgroundColor = Configuration.ThemeColor;
 			Content = new PointView();
 		}

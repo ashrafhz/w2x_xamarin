@@ -1,5 +1,5 @@
 ﻿using System;
-namespace w2x
+namespace w2x.Models.Logics
 {
 	public class Groups
 	{

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Acr.UserDialogs;
-using Cognitive.Component;
+using w2x.Component;
 using Plugin.Connectivity;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
@@ -19,7 +19,7 @@ namespace w2x.Views.Authentications
 		public AuthenticationView()
 		{
 			var ImageLogo = new Image { Aspect = Aspect.AspectFit };
-			ImageLogo.Source = ImageSource.FromFile("MenuIconWhite.png");
+			ImageLogo.Source = ImageSource.FromFile("w2xicon.png");
 			ImageLogo.HeightRequest = 100;
 			ImageLogo.WidthRequest = 100;
 
@@ -56,6 +56,7 @@ namespace w2x.Views.Authentications
 						Orientation = StackOrientation.Vertical,
 						Children = {
 							Configuration.GetBigLogo(),
+							Configuration.GetSeperator("w2x",50),
 							_ECUsername,
 							_ECPassword,
 							new StackLayout {
@@ -63,8 +64,8 @@ namespace w2x.Views.Authentications
 								HorizontalOptions = LayoutOptions.Center,
 								Orientation = StackOrientation.Horizontal,
 								Children = {
-									_AuthenticationBtn,
-									_CancelBtn
+									_AuthenticationBtn
+									//_CancelBtn
 								}
 							}
 						}
@@ -94,7 +95,8 @@ namespace w2x.Views.Authentications
 					List<Users> _Result = Users.SignIn(_ECUsername.Text, _ECPassword.Text);
 					if (_Result.Count > 0)
 					{
-						Navigation.PushAsync(new GreetingPage(_Result[0]), true);
+						//Navigation.PushAsync(new GreetingPage(_Result[0]), true);
+						VisionAuthorization(_Result[0]);
 					}
 					else
 					{
@@ -119,7 +121,7 @@ namespace w2x.Views.Authentications
 		}
 
 
-		private async void VisionAuthorization()
+		private async void VisionAuthorization(Users _Result )
 		{
 			if (CrossConnectivity.Current.IsConnected)
 			{
@@ -148,7 +150,7 @@ namespace w2x.Views.Authentications
 				};
 				using (var dialog = UserDialogs.Instance.Progress(config))
 				{
-					//Navigation.PushAsync(new GreetingPage(_Result), true);
+					Navigation.PushAsync(new GreetingPage(_Result), true);
 				}
 			}
 			else

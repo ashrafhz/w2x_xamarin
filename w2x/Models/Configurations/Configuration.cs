@@ -10,6 +10,7 @@ namespace w2x.Models.Configurations
 		public static Xamarin.Forms.Color ThemeColor = Xamarin.Forms.Color.FromHex("00aeef");//00aeef
 		public static Xamarin.Forms.Color FailedColor = Xamarin.Forms.Color.FromHex("ef677d");
 		public static Xamarin.Forms.Color TextColor = Xamarin.Forms.Color.FromHex("FFFFFF");
+		public static Xamarin.Forms.Color HightlightColor = Xamarin.Forms.Color.FromHex("ffff00");
 		public static String SQLConnection = "Data Source=w2x.database.windows.net;Database=w2x_db;User ID=user;Password=abc@1234;";
 #if __IOS__
 		public static String ResourcesPrefix = "UMNO.iOS.";
@@ -39,7 +40,7 @@ namespace w2x.Models.Configurations
 		public static StackLayout GetBigLogo()
 		{
 			var ImageLogo = new Image { Aspect = Aspect.AspectFit };
-			ImageLogo.Source = ImageSource.FromFile("Logo.png");
+			ImageLogo.Source = ImageSource.FromFile("w2xicon.png");
 			ImageLogo.WidthRequest = 150;
 			ImageLogo.HeightRequest = 150;
 
@@ -116,6 +117,21 @@ namespace w2x.Models.Configurations
 				//FontAttributes = FontAttributes.Bold,
 				HorizontalOptions = LayoutOptions.Center,
 				TextColor = Configuration.TextColor
+			};
+		}
+
+
+
+		public static Label GetSeperatorHightlight(String _Text, double _Size)
+		{
+			return new Label
+			{
+				Margin = new Thickness(0, 10, 0, 0),
+				Text = _Text,
+				FontSize = _Size,
+				//FontAttributes = FontAttributes.Bold,
+				HorizontalOptions = LayoutOptions.Center,
+				TextColor = Configuration.HightlightColor
 			};
 		}
 

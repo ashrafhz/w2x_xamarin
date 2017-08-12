@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using w2x.Models.Configurations;
 using Xamarin.Forms;
 
-namespace Cognitive.Component
+namespace w2x.Component
 {
 	internal class PickerCell : ViewCell
 	{

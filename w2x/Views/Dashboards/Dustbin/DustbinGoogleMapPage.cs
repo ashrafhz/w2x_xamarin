@@ -4,14 +4,14 @@ using Xamarin.Forms;
 
 namespace w2x.Views.Dashboards.Dustbin
 {
-	public class DustbinPage : ContentPage
+	public class DustbinGoogleMapPage : ContentPage
 	{
-		public DustbinPage()
+		public DustbinGoogleMapPage()
 		{
 			NavigationPage.SetHasNavigationBar(this, true);
-			Title = "List Of Dustbin";
+			Title = "Dustbin Location";
 			BackgroundColor = Configuration.ThemeColor;
-			Content = new DustbinView();
+			Content = new DustbinGoogleMapView();
 		}
 	}
 }

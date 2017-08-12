@@ -8,7 +8,6 @@ namespace w2x
 	{
 		public TransactionPage()
 		{
-
 			NavigationPage.SetHasNavigationBar(this, true);
 			Title = "Transaction";
 			BackgroundColor = Configuration.ThemeColor;

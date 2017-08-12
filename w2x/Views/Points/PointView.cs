@@ -1,12 +1,15 @@
 ﻿using System;
-using Cognitive.Component;
+using w2x.Component;
 using w2x.Models.Configurations;
+using w2x.Views.Points.Redeems;
 using Xamarin.Forms;
 
 namespace w2x.Views.Points
 {
 	public class PointView : ContentView
 	{
+		public static float _GlobalPoint = 0;
+		public static Label _GlobalPointLbl;
 		public PointView()
 		{
 			CustomButton _RedeemBtn = new CustomButton();
@@ -19,6 +22,16 @@ namespace w2x.Views.Points
 			_TransactionBtn.WidthRequest = 110;
 			_TransactionBtn.Clicked += Transaction_Clicked;
 
+			_GlobalPointLbl = new Label
+			{
+				Margin = new Thickness(0, 10, 0, 0),
+				Text = _GlobalPoint.ToString("#,##0"),
+				FontSize = 70,
+				//FontAttributes = FontAttributes.Bold,
+				HorizontalOptions = LayoutOptions.Center,
+				TextColor = Configuration.HightlightColor
+			};
+
 			Content = new StackLayout
 			{
 				Children =
@@ -29,11 +42,12 @@ namespace w2x.Views.Points
 						Orientation = StackOrientation.Vertical,
 						Padding = new Thickness(50,0),
 						Children = {
-							Configuration.GetSeperator("100,000",35),
+							_GlobalPointLbl,
+							Configuration.GetSeperator("Points",20),
 							new StackLayout {
 								Margin = new Thickness(0,20,0,0),
 								HorizontalOptions = LayoutOptions.Center,
-								Orientation = StackOrientation.Horizontal,
+								Orientation = StackOrientation.Vertical,
 								Children = {
 									_RedeemBtn,
 									_TransactionBtn
@@ -50,9 +64,9 @@ namespace w2x.Views.Points
 			await Navigation.PushAsync(new RedeemPage(), true);
 		}
 
-		void Transaction_Clicked(object sender, EventArgs e)
+		private async void Transaction_Clicked(object sender, EventArgs e)
 		{
-			Navigation.PopToRootAsync();
+			await Navigation.PushAsync(new TransactionPage(), true);
 		}
 	}
 }

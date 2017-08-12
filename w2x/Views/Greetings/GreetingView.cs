@@ -1,5 +1,5 @@
 ﻿using System;
-using Cognitive.Component;
+using w2x.Component;
 using w2x.Models.Configurations;
 using w2x.Models.Logics;
 using w2x.Views.Dashboards;
@@ -10,11 +10,14 @@ namespace w2x.Views.Greeting
 {
 	public class GreetingView : ContentView
 	{
-		String _varGroup = string.Empty;
+		public static String _varGroup = string.Empty;
+		public static Guid _UserId;
 		public GreetingView(Users _argUser)
 		{
 			CustomButton _GoToMainMenuBtn = new CustomButton();
 			_varGroup = _argUser.Group[0].Name;
+			_UserId = _argUser.UserId;
+			PointView._GlobalPoint = _argUser.Point;
 			if (_varGroup == "Community")
 			{
 				_GoToMainMenuBtn.Text = "Point";
@@ -42,9 +45,8 @@ namespace w2x.Views.Greeting
 						Padding = new Thickness(50,0),
 						Children = {
 							Configuration.GetProfileIcon(),
-							Configuration.GetSeperator("Greeting Hii!!",35),
-							Configuration.GetSeperator(_argUser.FullName,15),
-							//Configuration.GetSeperator(_Result.Results.CIS_No,15),
+							Configuration.GetSeperator("Greeting Hii!!",15),
+							Configuration.GetSeperatorHightlight(_argUser.FullName,25),
 							new StackLayout {
 								Margin = new Thickness(0,20,0,0),
 								HorizontalOptions = LayoutOptions.Center,
@@ -62,12 +64,13 @@ namespace w2x.Views.Greeting
 
 		private async void GoToMainMenu_Clicked(object sender, EventArgs e)
 		{
+			Dustbins.UpdateMCMCDustbin();
 			if (_varGroup == "Community")
 			{
 				await Navigation.PushAsync(new PointPage(), true);
 			}
 			else 
-			{ 
+			{
 				await Navigation.PushAsync(new DashboardPage(), true);
 			}
 		}

@@ -34,6 +34,17 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Dashboards\Dustbin\DustbinView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Dashboards\CollectedHistory\CollectionHistoryPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Dashboards\CollectedHistory\CollectionHistoryView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Logics\Products.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Logics\Points.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Points\Messages\MessagePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Points\Messages\MessageView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Logics\Dustbins.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Logics\DustbinTransaction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dashboards\Dustbin\DustbinGoogleMapView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dashboards\Dustbin\DustbinGoogleMapPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dashboards\Dustbin\AnalyticPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dashboards\Dustbin\AnalyticView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Logics\RootObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Components\" />
@@ -48,5 +59,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\Points\Transactions\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Dashboards\CollectedHistory\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Dashboards\Dustbin\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Points\Messages\" />
   </ItemGroup>
 </Project>

@@ -9,7 +9,7 @@ namespace w2x
 		public CollectionHistoryPage()
 		{
 			NavigationPage.SetHasNavigationBar(this, true);
-			Title = "Collection History";
+			Title = "Pickup";
 			BackgroundColor = Configuration.ThemeColor;
 			Content = new CollectionHistoryView();
 		}

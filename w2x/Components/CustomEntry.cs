@@ -1,7 +1,7 @@
 using w2x.Models.Configurations;
 using Xamarin.Forms;
 
-namespace Cognitive.Component
+namespace w2x.Component
 {
 	public class CustomEntry : Entry
 	{
